@@ -53,7 +53,10 @@ app.get('/youtube', (req, res) => {
     res.send('<h1>Youtube</h1>')
 })
 
-console.log(process.env.PORT)
+app.get('/github', (req, res) => {
+    res.json(gitHubData)
+})
+
 
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`)
